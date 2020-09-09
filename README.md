@@ -8,11 +8,13 @@ git subtree add --prefix=reuse https://github.com/Heyff12/reuseSon.git master --
 
 ## 2、修改后提交子项目代码  
 
+需要先把当前修改提交到本项目，再执行下面的 subtree 推送
+
 ```
 git subtree push --prefix=reuse https://github.com/Heyff12/reuseSon.git master
 ```
 
-这个提交停留在当前项目的 reuse文件夹下面，远程被拉取仓库并不会更新
+这个提交会更新 subtree的库的代码； subtree库需要 pull 获取最新改动
 
 ## 3、 拉取子项目最新代码  
 
