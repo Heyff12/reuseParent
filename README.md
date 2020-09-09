@@ -1,27 +1,22 @@
-# ReuseSon
+# 一、发布npm包  
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
+## 1、 发包
 
-## Development server
+* npm init
+* 新建 .npmignore 忽略文件
+* npm login
+* npm publish
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+备注： fix 包的名字  @hey_ff/testbutton，发布时  
+```
+npm publish --access public
+```
 
-## Code scaffolding
+## 2、再父项目引用 
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* 需要在父项目进行编译  
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## 3、优化  
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+* 在本项目进行build
