@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "pullNpm": "git subtree pull --prefix=reuse https://github.com/Heyff12/reuseSon.git master --squash"
   },
   "private": true,
   "dependencies": {
