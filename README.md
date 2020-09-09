@@ -19,7 +19,7 @@ git subtree push --prefix=reuse https://github.com/Heyff12/reuseSon.git master
 ```
 git subtree pull --prefix=reuse https://github.com/Heyff12/reuseSon.git master --squash
 ```
-如果当前项目更改了 子库代码，则pull 失败
+
 
 ## 3、弊端
 
