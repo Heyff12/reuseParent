@@ -13,9 +13,11 @@
     "src/**/*.d.ts",
     "node_modules/@hey_ff/testbutton/the-button/**/*.ts",
     "reuse/src/app/components/**/*.ts",
+    "node_modules/btnUrl/**/*.ts",
   ],
   "exclude": [
     "node_modules/@hey_ff/testbutton/the-button/**/*.spec.ts",
-    "reuse/src/app/components/**/*.spec.ts"
+    "reuse/src/app/components/**/*.spec.ts",
+    "node_modules/btnUrl/**/*.spec.ts",
   ]
 }

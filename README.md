@@ -88,3 +88,39 @@ import {TheButtonComponent} from 'btn'
     "reuse/src/app/components/**/*.spec.ts"
   ]
 ```
+
+# 四、子项目不发包，通过Url引用  
+
+## 1、修改本项目的package.json
+```
+"btnUrl": "https://github.com/Heyff12/reuseBtn",
+```
+
+## 2、在app.module.ts引入
+
+```
+// import {TheButtonComponent} from '@hey_ff/testbutton/the-button/the-button.component'
+// import {TheButtonComponent} from 'btn'
+import {TheButtonComponent} from 'btnUrl'
+
+@NgModule({
+  declarations: [
+    AppComponent,TheButtonComponent
+  ],
+```
+
+## 4、在tsconfig.app.json种加入编译
+
+```
+"include": [
+    "src/**/*.d.ts",
+    "node_modules/@hey_ff/testbutton/the-button/**/*.ts",
+    "reuse/src/app/components/**/*.ts",
+    "node_modules/btnUrl/**/*.ts",
+  ],
+  "exclude": [
+    "node_modules/@hey_ff/testbutton/the-button/**/*.spec.ts",
+    "reuse/src/app/components/**/*.spec.ts",
+    "node_modules/btnUrl/**/*.spec.ts",
+  ]
+```
