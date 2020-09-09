@@ -59,3 +59,32 @@ npm install @hey_ff/testbutton
 ## 1、将子项目的代码拉取到本项目，也可以使用第一种里面的subtree路径  
 
 ## 2、修改本项目的package.json
+```
+"btn": "file:./reuse/src/app/components",
+```
+
+## 3、在app.module.ts引入
+
+```
+// import {TheButtonComponent} from '@hey_ff/testbutton/the-button/the-button.component'
+import {TheButtonComponent} from 'btn'
+
+@NgModule({
+  declarations: [
+    AppComponent,TheButtonComponent
+  ],
+```
+
+## 4、在tsconfig.app.json种加入编译
+
+```
+"include": [
+    "src/**/*.d.ts",
+    "node_modules/@hey_ff/testbutton/the-button/**/*.ts",
+    "reuse/src/app/components/**/*.ts",
+  ],
+  "exclude": [
+    "node_modules/@hey_ff/testbutton/the-button/**/*.spec.ts",
+    "reuse/src/app/components/**/*.spec.ts"
+  ]
+```
