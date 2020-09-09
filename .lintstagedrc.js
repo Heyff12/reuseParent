@@ -7,5 +7,5 @@ module.exports = {
     ];
     return rule;
   },
-  "src/app/**/*.{html,less}": ["npm run prettier"],
+  "src/app/**/*.{html,less,ts}": ["npm run prettier"],
 };
