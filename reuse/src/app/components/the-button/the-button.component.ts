@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TheButtonComponent implements OnInit {
 
-  @Input() text:string
+  @Input() text: string;
 
   constructor() { }
 
