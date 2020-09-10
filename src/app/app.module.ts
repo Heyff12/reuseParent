@@ -6,9 +6,15 @@ import { AppComponent } from './app.component';
 // import {TheButtonComponent} from '@hey_ff/testbutton/the-button/the-button.component'
 // import {TheButtonComponent} from 'btn'
 import { TheButtonComponent } from 'btnUrl';
+import { MyTheButtonComponent, MyLibComponent } from '@hey_ff/my-lib';
 
 @NgModule({
-  declarations: [AppComponent, TheButtonComponent],
+  declarations: [
+    AppComponent,
+    TheButtonComponent,
+    MyTheButtonComponent,
+    MyLibComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
