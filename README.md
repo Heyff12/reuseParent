@@ -193,3 +193,12 @@ import { MyLibModule } from 'reuse';
 * 第五种方式的，第3步
 
 
+
+
+# 相关库：
+
+* [第五种方式，构建angular组件打包](https://github.com/Heyff12/angularPackage)  
+* [未编译的组件包](https://github.com/Heyff12/reuseSon)  
+* [未编译的组件包，第四种，子项目不发包，通过Url引用](https://github.com/Heyff12/reuseBtn)   
+ 
+
