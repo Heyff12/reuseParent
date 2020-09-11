@@ -7,7 +7,8 @@ import { AppComponent } from './app.component';
 // import {TheButtonComponent} from 'btn'
 import { TheButtonComponent } from 'btnUrl';
 // import { MyTheButtonComponent, MyLibComponent } from '@hey_ff/my-lib';
-import { MyLibModule } from '@hey_ff/my-lib';
+// import { MyLibModule } from '@hey_ff/my-lib';
+import { MyLibModule } from 'reuse';
 
 @NgModule({
   declarations: [AppComponent, TheButtonComponent],

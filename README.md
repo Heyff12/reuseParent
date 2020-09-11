@@ -164,6 +164,30 @@ import { MyLibModule } from '@hey_ff/my-lib';
   imports: [BrowserModule, AppRoutingModule, MyLibModule],
 ```
 
+## 3、如果不方便发布到npm
+
+1、可以把第一步的 打包好的文件 dist/my-lib push 到指定分支
+
+```
+git subtree push --prefix dist/my-lib origin reuse
+```
+
+2、在父项目 通过 指定分支路径 安装上面的打包好的文件 
+
+```
+"reuse": "git@github.com:Heyff12/angularPackage.git#reuse",
+```
+
+3、 正常使用
+
+```
+import { MyLibModule } from 'reuse';
+
+@NgModule({
+  declarations: [AppComponent, TheButtonComponent],
+  imports: [BrowserModule, AppRoutingModule, MyLibModule],
+```
+
 # 总结  
 
 * 建一个新的git库，构建angular module，所有component都引入该module，则在使用的地方，引入一个module，即可使用所有的component

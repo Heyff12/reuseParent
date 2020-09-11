@@ -30,6 +30,7 @@
     "@hey_ff/testbutton": "^1.0.0",
     "btn": "file:./reuse/src/app/components",
     "btnUrl": "https://github.com/Heyff12/reuseBtn",
+    "reuse": "git@github.com:Heyff12/angularPackage.git#reuse",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
