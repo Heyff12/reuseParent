@@ -125,6 +125,44 @@ import {TheButtonComponent} from 'btnUrl'
   ]
 ```
 
+# 五、子项目发布angular组件包
+
+## 1、在子项目构建library配置，可以build、发布组件包
+
+1.创建工作区
+
+ng new xxxx --create-application=false  
+
+xxxx为项目名
+
+2.进入项目新建library
+
+cd xxxx
+
+ng g library my-lib --prefix=ml
+
+3.编译
+ng build my-lib --prod
+
+4.编译后会生成dist文件，进入dist文件
+cd dist
+cd my-lib
+5.打包
+
+npm pack
+
+6.发布
+npm publish --access public
+
+## 2、在父项目安装包，可以直接使用
+
+```
+import { MyLibModule } from '@hey_ff/my-lib';
+
+@NgModule({
+  declarations: [AppComponent, TheButtonComponent],
+  imports: [BrowserModule, AppRoutingModule, MyLibModule],
+```
 
 # 总结  
 
