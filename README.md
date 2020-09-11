@@ -188,12 +188,8 @@ import { MyLibModule } from 'reuse';
   imports: [BrowserModule, AppRoutingModule, MyLibModule],
 ```
 
-# 总结  
+# 最有方案  
 
-* 建一个新的git库，构建angular module，所有component都引入该module，则在使用的地方，引入一个module，即可使用所有的component
-* 在父库，通过url引入
-* 需要在父库，知道ts编译
+* 第五种方式的，第3步
 
-## 优化 
 
-* 对组件库进行build
