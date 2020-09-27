@@ -5,8 +5,9 @@
     "ng": "ng",
     "start": "ng serve --port 4202",
     "build": "ng build",
+    "build:reuse":"ng build reuse --prod",
     "test": "ng test",
-    "lint": "ng lint",
+    "lint": "ng lint --fix",
     "e2e": "ng e2e"
   },
   "private": true,

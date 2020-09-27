@@ -123,6 +123,44 @@
           }
         }
       }
+    },
+    "reuse":{
+      "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "less"
+        }
+      },
+      "root": "reuse",
+      "sourceRoot": "reuse/src",
+      "prefix": "re",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "reuse/src/tsconfig.app.json",
+            "project":"reuse/src/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "reuse/src/tsconfig.app.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "reuse/src/tsconfig.app.json",
+              "reuse/src/tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
   "defaultProject": "reuseSon"
 }
