@@ -1,14 +1,14 @@
 {
-  "name": "resue-parent",
+  "name": "reuse-son",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --port 4201",
+    "start": "ng serve --port 4202",
     "build": "ng build",
+    "build:reuse":"ng build reuse --prod",
     "test": "ng test",
     "lint": "ng lint --fix",
-    "e2e": "ng e2e",
-    "pull-npm": "git subtree pull --prefix=reuse https://github.com/Heyff12/reuseSon.git master --squash"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -20,9 +20,6 @@
     "@angular/platform-browser": "~10.1.0",
     "@angular/platform-browser-dynamic": "~10.1.0",
     "@angular/router": "~10.1.0",
-    "@hey_ff/testbutton": "^1.0.0",
-    "btn": "file:./reuse/src/app/components",
-    "btnUrl": "https://github.com/Heyff12/reuseBtn",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"

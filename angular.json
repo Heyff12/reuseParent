@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "resueParent": {
+    "reuseSon": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/resueParent",
+            "outputPath": "dist/reuseSon",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "resueParent:build"
+            "browserTarget": "reuseSon:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "resueParent:build:production"
+              "browserTarget": "reuseSon:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "resueParent:build"
+            "browserTarget": "reuseSon:build"
           }
         },
         "test": {
@@ -114,15 +114,53 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "resueParent:serve"
+            "devServerTarget": "reuseSon:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "resueParent:serve:production"
+              "devServerTarget": "reuseSon:serve:production"
             }
           }
         }
       }
+    },
+    "reuse":{
+      "projectType": "library",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "less"
+        }
+      },
+      "root": "reuse",
+      "sourceRoot": "reuse/src",
+      "prefix": "re",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "reuse/src/tsconfig.app.json",
+            "project":"reuse/src/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "reuse/src/tsconfig.app.prod.json"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "reuse/src/tsconfig.app.json",
+              "reuse/src/tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }},
-  "defaultProject": "resueParent"
+  "defaultProject": "reuseSon"
 }
