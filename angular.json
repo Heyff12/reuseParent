@@ -107,7 +107,8 @@
             ],
             "exclude": [
               "**/node_modules/**"
-            ]
+            ],
+            "fix": true
           }
         },
         "e2e": {
