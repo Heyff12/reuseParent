@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "resueParent"
+    }
+  },
+  "defaultProject": "resueParent",
+  "cli": {
+    "analytics": false
+  }
 }
