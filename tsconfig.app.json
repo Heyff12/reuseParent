@@ -15,6 +15,7 @@
     "reuse/src/app/components/**/*.ts",
     "node_modules/btnUrl/**/*.ts",
     "reuseSon/src/app/components/**/*.ts",
+    // "../reuseBtn/the-button/**/*.ts",
   ],
   "exclude": [
     "node_modules/@hey_ff/testbutton/the-button/**/*.spec.ts",
